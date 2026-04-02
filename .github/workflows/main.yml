@@ -11,13 +11,13 @@ jobs:
 
     steps:
       - name: Set up JDK 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Create project structure
         run: |
@@ -255,7 +255,7 @@ jobs:
           ./gradlew bundleDebug
 
       - name: Upload AAB
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: DDDI-X-debug.aab
           path: DDDI-X/app/build/outputs/bundle/debug/app-debug.aab
